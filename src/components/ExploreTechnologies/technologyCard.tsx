@@ -2,16 +2,20 @@ import type { technologyType } from "../../type";
 import { FcRating } from "react-icons/fc";
 
 
+
 export interface technoloyCardProps{
     technology:technologyType;
 }
 
 function TechnologyCard({technology}:technoloyCardProps) {
+    
+    const [addToCart,setAddToCart]=useState(false);
      
     return(
     <div className="flex flex-col border  border-black rounded-lg p-4">
+
           
-          <div>
+        <div>
             <div className="flex  justify-between">
             <img className="w=7 h-7 object-contain" src={technology.icon} ></img>
             <span className="badge badge-outline badge-primary">{technology.badge}</span>
@@ -28,11 +32,12 @@ function TechnologyCard({technology}:technoloyCardProps) {
             <p className="flex items-center gap-1"><FcRating />{technology.rating}</p>
           
            </div>
-           <button className="flex mx-auto mb-0.5 btn btn-wide text-white bg-[#3b066d] rounded-full">Add to Stock</button>
-            </div>
-           
 
-       </div>); 
+           <button className="flex mx-auto mb-0.5 btn btn-wide text-white bg-[#3b066d] rounded-full">Add to Stock</button>
+            
+        </div>          
+
+    </div>); 
 }
 
 export default TechnologyCard;

@@ -4,6 +4,8 @@ import Banner from './components/banner'
 import ExploreTechnologies from './components/ExploreTechnologies/ExploreTechnologies'
 import type { technologyType } from './type'
 import { Suspense, useState } from 'react'
+import Footer from './components/footer'
+import FooterLower from './components/footerLower'
 
 function App() {
  const fetchData=async ():Promise<technologyType[]>=>{
@@ -21,6 +23,9 @@ function App() {
 
            <ExploreTechnologies promiseData={promiseData}></ExploreTechnologies>
         </Suspense>
+
+        <Footer></Footer>
+        <FooterLower></FooterLower>
        
     </div>
    
