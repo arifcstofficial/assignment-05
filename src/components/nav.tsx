@@ -6,7 +6,7 @@ function Nav() {
 
             <div className="flex justify-around">
             <div>
-                 <img src={logo}></img>
+                 <img src={logo} alt="logo-Image"></img>
             </div>
            
             <div>
@@ -19,9 +19,9 @@ function Nav() {
                 </ul>
     
               </div>
-              <div>
-                 <button className="btn">Sign In</button>
-                 <button className="btn btn-secondary">Sign Up</button>
+              <div className="flex gap-2">
+                 <button className="text-gray-400 hover:text-primary">Sign In</button>
+                 <button className="btn btn-secondary rounded-full">Sign Up</button>
               </div>
              
      </div>
