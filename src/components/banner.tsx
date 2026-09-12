@@ -14,7 +14,7 @@ function Banner() {
                 </p>
                 
                     <div className="flex gap-4 mt-15">
-                        <button className="btn btn-active bg-red-400 rounded-2xl">Explore Technologies</button>
+                        <button className="btn btn-active bg-linear-to-r from-[#bf5e5e] to-[#b60909] text-white rounded-2xl">Explore Technologies</button>
                         <button className="btn btn-outline">Learn More</button>
                     </div>
                     
