@@ -11,7 +11,7 @@ export function YourStackCard({ technology,handleRemove }: YourStackCardProops) 
   
     
     return (
-        <div className="flex p-3 justify-between border border-[#d38c8c] rounded-2xl">
+        <div className="flex p-3 justify-between border rounded-2xl">
             
                 <div className="flex gap-2">
                     <img className="w-12 h-12" src={technology.icon}></img>

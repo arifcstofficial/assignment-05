@@ -13,8 +13,9 @@ export function CardWithElements({yourStack,handleRemove,handleRemoveAll}:CardWi
     return(
           <>
             <div>
-                <h1>Your Stack</h1>
-                <p>{yourStack.length} Technology Selected</p>
+                 <h1 className="font-bold text-4xl">Your Stack</h1>
+                  <p className="text-gray-500 mb-3">{yourStack.length} Technology Selected Yet</p>
+                    <div className="divider"></div>
                 <div className="grid grid-cols-1 gap-2 ">
                     {
                         yourStack.map(technology => (
@@ -24,7 +25,7 @@ export function CardWithElements({yourStack,handleRemove,handleRemoveAll}:CardWi
                 </div>
 
             </div>
-            <button onClick={()=>handleRemoveAll()}className="btn btn-wide bg-white border border-red-500 text-red-500">Remove All</button>
+            <button onClick={()=>handleRemoveAll()}className="btn btn-wide bg-white border border-red-500 text-red-500 mt-auto">Remove All</button>
         </>
     );
 }

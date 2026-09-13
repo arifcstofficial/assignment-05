@@ -33,7 +33,7 @@ export default function ExploreTechnologies({ promiseData }: ExploreTechnologies
           {technologyData.map(technology => (<TechnologyCard key={technology.id} yourStack={yourStack} technology={technology} handleAddToStack={handleAddToStack}></TechnologyCard>))}
 
         </div>
-        <div className="flex-1 border border-black rounded-lg p-4 h-90">
+        <div className="flex-1 h-[400px] w-[350px] overflow-y-auto border border-black rounded-lg p-4 flex flex-col">
           <YourStack handleRemove={handleRemove} handleRemoveAll={handleRemoveAll} yourStack={yourStack}></YourStack>
         </div>
       </div>
