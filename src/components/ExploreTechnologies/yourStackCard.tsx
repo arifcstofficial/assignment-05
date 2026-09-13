@@ -1,0 +1,28 @@
+import type { technologyType } from "../../type"
+import { IoClose } from "react-icons/io5";
+
+export interface YourStackCardProops {
+    technology: technologyType;
+
+}
+export function YourStackCard({ technology }: YourStackCardProops) {
+
+    return (
+        <div className="flex p-3 justify-between border border-[#d38c8c]">
+            
+                <div className="flex gap-2">
+                    <img className="w-12 h-12" src={technology.icon}></img>
+                    <div>
+                        <p className="font-bold">{technology.name}</p>
+                        <p className="text-gray-500">{technology.category}</p>
+                    </div>
+                </div>
+            
+            
+            <div className=" flex justify-center items-center">
+                <button className="text-4xl"><IoClose /></button>
+            </div>
+
+        </div>
+    )
+}
