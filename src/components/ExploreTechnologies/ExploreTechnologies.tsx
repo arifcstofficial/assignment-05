@@ -2,6 +2,7 @@ import { use, useState } from "react";
 import type { technologyType } from "../../type"
 import TechnologyCard from "./technologyCard";
 import YourStack from "./yourStack";
+import {toast} from "react-toastify";
 
 export interface ExploreTechnologiesProps {
   promiseData: Promise<technologyType[]>;
@@ -13,14 +14,25 @@ export default function ExploreTechnologies({ promiseData }: ExploreTechnologies
   const[yourStack, setYourStack]=useState<technologyType[]>([]);
  
    const handleAddToStack=(technology:technologyType)=>{
+
+       const ifExists=yourStack.some(items=>items.id===technology.id);
+       if(ifExists){
+        toast.warning(`${technology.name} is already in the Stack`);
+        return;
+       }
+                     
         setYourStack([...yourStack,technology]);
+        toast.success(`${technology.name} is added successfully`);
+
    }
 
    const handleRemove=(id:string)=>{
     setYourStack((previousStack=>previousStack.filter(technology=>technology.id!=id)));
-   }
+     toast.success("Removed Successfully"); 
+  }
    const handleRemoveAll=()=>{
     setYourStack([]);
+    toast.success("Removed All Successfully");
    }
   return (
     <div>

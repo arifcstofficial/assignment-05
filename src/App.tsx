@@ -6,6 +6,8 @@ import type { technologyType } from './type'
 import { Suspense, useState } from 'react'
 import Footer from './components/footer'
 import FooterLower from './components/footerLower'
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
  const fetchData=async ():Promise<technologyType[]>=>{
@@ -26,6 +28,7 @@ function App() {
 
         <Footer></Footer>
         <FooterLower></FooterLower>
+        <ToastContainer></ToastContainer>
        
     </div>
    

@@ -6,8 +6,8 @@ function FooterLower() {
                 © 2026 Dev Stack. All rights reserved.
              </div>
             <div className="flex gap-5">
-                <p>Privacy</p>
-                <p>Terms</p>
+                <p><a href="#privacy">Privacy</a></p>
+                <p><a href="#terms">Terms</a></p>
             </div>
            </div>)
 }

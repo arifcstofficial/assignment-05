@@ -7,7 +7,7 @@ export function EmptyStackCard() {
          <div className="divider"></div>
     </div>
     <div className="flex justify-center items-center my-auto mx-auto">
-        <div className="font-bold text-2xl border p-4 ">Your Stack is Empty</div>
+        <div className="font-bold text-2xl border p-4 rounded-2xl">Your Stack is Empty</div>
     </div>
             
 

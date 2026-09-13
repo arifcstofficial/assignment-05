@@ -2,15 +2,15 @@ import logo from '../assets/logo.png'
 function Nav() {
     
     return(
-        <nav className="sticky top-0 z-50 bg-amber-50">
+        <nav className="sticky top-0 z-50 bg-amber-100">
 
-            <div className="flex justify-around">
+            <div className="flex justify-around items-center">
             <div>
                  <img src={logo} alt="logo-Image"></img>
             </div>
            
             <div>
-                <ul className="flex gap-7">
+                <ul className="flex gap-7 items-center justify-center">
                      <li><a href="#home">Home</a></li>
                     <li><a href="#technologies">Technologies</a></li>
                     <li><a href="#projects">Projects</a></li>

@@ -25,7 +25,7 @@ export function CardWithElements({yourStack,handleRemove,handleRemoveAll}:CardWi
                 </div>
 
             </div>
-            <button onClick={()=>handleRemoveAll()}className="btn btn-wide bg-white border border-red-500 text-red-500 mt-auto">Remove All</button>
+            <button onClick={()=>handleRemoveAll()}className="font-bold text-2xl btn btn-wide bg-white border border-red-500 rounded-[10-px] text-red-500 mt-auto">Remove All</button>
         </>
     );
 }
