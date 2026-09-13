@@ -1,21 +1,16 @@
-import { useState } from "react";
 import type { technologyType } from "../../type";
 import { FcRating } from "react-icons/fc";
 
 export interface technoloyCardProps{
+    yourStack:technologyType[];
     technology:technologyType;
     handleAddToStack:(technology:technologyType)=>void;
 }
 
-function TechnologyCard({technology,handleAddToStack}:technoloyCardProps) {
+function TechnologyCard({yourStack,technology,handleAddToStack}:technoloyCardProps) {
 
-    const [addToCart,setAddToCart]=useState(false);
-     
-    const handleAddToCart=(technology:technologyType)=>{
-         setAddToCart(true);
-         handleAddToStack(technology);
-         
-    }
+    const isSelected=yourStack.some(item=>item.id===technology.id);
+
      
     return(
     <div className="flex flex-col border  border-black rounded-lg p-4">
@@ -40,11 +35,11 @@ function TechnologyCard({technology,handleAddToStack}:technoloyCardProps) {
            </div>
 
            <button 
-           onClick={()=>handleAddToCart(technology)}
-            disabled={addToCart}
+           onClick={()=>handleAddToStack(technology)}
+            disabled={isSelected}
             className="flex btn btn-wide rounded-full text-white bg-black disabled:bg-black/40"
             >
-                {addToCart?"✔ Added to Stack":"Add to Stack"}
+                {isSelected?"✔ Added to Stack":"Add to Stack"}
                 
             </button>
             
